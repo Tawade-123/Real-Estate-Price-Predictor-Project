@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('input') }}">Prediction</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <h4>Welcome to the Real Estate Price Prediction project, an innovative web application designed to estimate property prices
+            based on various housing features. This project harnesses the power of machine learning, utilizing a RandomForest
+            Regressor model trained on extensive real estate data to provide accurate price predictions. Users can easily interact
+            with the intuitive front-end interface to input key property details, including the number of bedrooms (BHK), property
+            type (such as Apartment, Villa, or Penthouse), area in square feet, construction status (Ready to move or Under
+            Construction), and property age (New, Resale, or Unknown). The application processes these inputs and delivers a
+            reliable price estimate, aiding users in making informed real estate decisions. The web application boasts a
+            user-friendly design with a sleek navigation bar offering easy access to the Home, Contact Us, and About sections. The
+            interface is enhanced with a visually appealing background image, ensuring a pleasant user experience. Developed using
+            Flask for the backend and HTML/CSS for the frontend, this project seamlessly integrates the prediction model into the
+            web environment. By bridging the gap between complex data analysis and everyday usability, this Real Estate Price
+            Prediction application stands as a testament to the practical applications of machine learning in the real estate
+            industry, offering potential buyers, sellers, and real estate professionals a valuable tool for assessing property
+            values with confidence.</h4>
+        
+    </div>
+
+    <!-- <script>
+        document.getElementById('bhk').addEventListener('input', function() {
+            document.getElementById('bhkOutput').value = this.value;
+        });
+    </script> -->
+</body>
+</html>

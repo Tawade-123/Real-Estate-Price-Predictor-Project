@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('input') }}">Prediction</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="home_container">
+
+        <div class="box-container">
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/img1.png') }}" alt="">
+                <p>Rs. 400 lakhs</p>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/img2.png') }}" alt="">
+                <p>Rs. 150 lakhs</p>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/img3.png') }}" alt="">
+                <p>Rs. 75 lakhs</p>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/img4.png') }}" alt="">
+                <p>Rs. 300 lakhs</p>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/img5.png') }}" alt="">
+                <p>Rs. 50 lakhs</p>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/img6.png') }}" alt="">
+                <p>Rs. 450 lakhs</p>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/img7.png') }}" alt="">
+                <p>Rs. 270 lakhs</p>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/img8.png') }}" alt="">
+                <p>Rs. 700 lakhs</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('bhk').addEventListener('input', function() {
+            document.getElementById('bhkOutput').value = this.value;
+        });
+    </script>
+</body>
+</html>

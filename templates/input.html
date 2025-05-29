@@ -1,0 +1,75 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('input') }}">Prediction</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Real Estate Price Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="bhk">BHK:</label>
+            <input type="range" id="bhk" name="bhk" min="1" max="10" required>
+            <output id="bhkOutput" for="bhk">5</output><br>
+
+            <label for="type">Type:</label>
+            <select id="type" name="type" required>
+                <option value="0">Apartment</option>
+                <option value="1">Studio Apartment</option>
+                <option value="2">Villa</option>
+                <option value="3">Independent House</option>
+                <option value="4">Penthouse</option>
+            </select><br>
+
+            <label for="area">Area (in sq. ft):</label>
+            <input type="number" id="area" name="area" required><br>
+
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="0">Ready to move</option>
+                <option value="1">Under Construction</option>
+            </select><br>
+
+            <label for="age">Age:</label>
+            <select id="age" name="age" required>
+                <option value="0">New</option>
+                <option value="1">Resale</option>
+                <option value="2">Unknown</option>
+            </select><br>
+
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+        {% endif %}
+    </div>
+
+    <script>
+        document.getElementById('bhk').addEventListener('input', function() {
+            document.getElementById('bhkOutput').value = this.value;
+        });
+    </script>
+</body>
+</html>
