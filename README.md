@@ -54,5 +54,5 @@ The model is trained using:
 ## 📧 Contact
 
 For questions or collaboration, feel free to contact me:
-- **GitHub**: [yourusername](https://github.com/Tawade-123)
+- **GitHub**: [Tawade-123](https://github.com/Tawade-123)
 - **Email**:shrikanttawade17@gmail.com
